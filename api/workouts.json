@@ -1,5 +1,4 @@
 [
-
     {
         "uid": 1,
         "text" : "Have you heard about the Web Components revolution?",
@@ -8,14 +7,49 @@
         "favorite": false,
         "sets" : [
             {
+                "type": "chin",
+                "weight": 175,
+                "reps": 6,
+                "warmwork": "working"
+            },
+            { "type": "chin",
+                "weight": 160,
+                "reps": 10,
+                "warmwork": "working"
+            },
+            {
+                "type": "chin",
+                "weight": 45,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "chin",
+                "weight": 95,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "chin",
+                "weight": 115,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "chin",
+                "weight": 135,
+                "reps": 3,
+                "warmwork": "warmup"
+            },
+            {
                 "type": "squat",
                 "weight": 175,
                 "reps": 6,
                 "warmwork": "working"
             },
             { "type": "squat",
-                "weight": 175,
-                "reps": 6,
+                "weight": 160,
+                "reps": 10,
                 "warmwork": "working"
             },
             {
@@ -38,6 +72,155 @@
             },
             {
                 "type": "squat",
+                "weight": 135,
+                "reps": 3,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "deadlift",
+                "weight": 175,
+                "reps": 6,
+                "warmwork": "working"
+            },
+            { "type": "deadlift",
+                "weight": 160,
+                "reps": 10,
+                "warmwork": "working"
+            },
+            {
+                "type": "deadlift",
+                "weight": 45,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "deadlift",
+                "weight": 95,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "deadlift",
+                "weight": 115,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "deadlift",
+                "weight": 135,
+                "reps": 3,
+                "warmwork": "warmup"
+            }
+        ]
+    },
+    {
+        "uid": 1,
+        "text" : "Have you heard about the Web Components revolution?",
+        "username" : "Eric",
+        "avatar" : "../images/avatar-01.svg",
+        "favorite": false,
+        "sets" : [
+            {
+                "type": "chin",
+                "weight": 175,
+                "reps": 6,
+                "warmwork": "working"
+            },
+            { "type": "chin",
+                "weight": 160,
+                "reps": 10,
+                "warmwork": "working"
+            },
+            {
+                "type": "chin",
+                "weight": 45,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "chin",
+                "weight": 95,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "chin",
+                "weight": 115,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "chin",
+                "weight": 135,
+                "reps": 3,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "squat",
+                "weight": 175,
+                "reps": 6,
+                "warmwork": "working"
+            },
+            { "type": "squat",
+                "weight": 160,
+                "reps": 10,
+                "warmwork": "working"
+            },
+            {
+                "type": "squat",
+                "weight": 45,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "squat",
+                "weight": 95,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "squat",
+                "weight": 115,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "squat",
+                "weight": 135,
+                "reps": 3,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "deadlift",
+                "weight": 175,
+                "reps": 6,
+                "warmwork": "working"
+            },
+            { "type": "deadlift",
+                "weight": 160,
+                "reps": 10,
+                "warmwork": "working"
+            },
+            {
+                "type": "deadlift",
+                "weight": 45,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "deadlift",
+                "weight": 95,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "deadlift",
+                "weight": 115,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "deadlift",
                 "weight": 135,
                 "reps": 3,
                 "warmwork": "warmup"

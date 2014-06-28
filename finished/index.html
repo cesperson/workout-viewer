@@ -32,8 +32,8 @@
             width: 100%;
         }
         .container {
-            width: 80%;
-            margin: 50px auto;
+            width: 92%;
+            margin: 4% auto;
         }
         @media (min-width: 481px) {
             paper-tabs {
@@ -55,10 +55,9 @@
         </paper-tabs>
     </core-toolbar>
 
-
+    <workout-service id="service" workouts="{{ workouts }}"></workout-service>
     <div class="container" layout vertical center>
         <workout-list show="all"></workout-list>
-        <!--<post-list show="all"></post-list>-->
     </div>
 
 

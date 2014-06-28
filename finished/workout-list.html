@@ -14,23 +14,47 @@
             workout-card {
                 margin-bottom: 30px;
             }
+            .workout {
+                border-bottom: 1px solid #000;
+                width: 100%;
+                margin-bottom: 30px;
+            }
         </style>
 
 
         <!--<post-service id="service" posts="{{posts}}"></post-service>-->
         <workout-service id="service" workouts="{{ workouts }}"></workout-service>
 
-
         <div layout vertical center>
-            <template repeat="{{workout in workouts}}">
-                <workout-card
-                        favorite="{{workout.favorite}}"
-                        sets="{{workout.sets}}"
-                        on-favorite-tap="{{handleFavorite}}"
-                        hidden?="{{show == 'favorites' && !workout.favorite}}">
-                </workout-card>
+            <template repeat="{{workout in workouts}}" class="workout">
+                <div class="workout">
+                    <template repeat="{{workout in workouts}}">
+                    </template>
+                    <workout-card
+                            favorite="{{workout.favorite}}"
+                            sets="{{workout.sets}}"
+                            type="squat"
+                            on-favorite-tap="{{handleFavorite}}"
+                            hidden?="{{show == 'favorites' && !workout.favorite}}">
+                    </workout-card>
+                    <workout-card
+                            favorite="{{workout.favorite}}"
+                            sets="{{workout.sets}}"
+                            type="deadlift"
+                            on-favorite-tap="{{handleFavorite}}"
+                            hidden?="{{show == 'favorites' && !workout.favorite}}">
+                    </workout-card>
+                    <workout-card
+                            favorite="{{workout.favorite}}"
+                            sets="{{workout.sets}}"
+                            type="chin"
+                            on-favorite-tap="{{handleFavorite}}"
+                            hidden?="{{show == 'favorites' && !workout.favorite}}">
+                    </workout-card>
+                </div>
             </template>
         </div>
+
     </template>
 
     <script>
