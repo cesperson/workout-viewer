@@ -3,6 +3,7 @@
 <link rel="import" href="../post-service/workout-service.html">
 <!--<link rel="import" href="post-card.html">-->
 <link rel="import" href="workout-card.html">
+<link rel="import" href="set-menu.html">
 
 <polymer-element name="workout-list" attributes="show">
     <template>
@@ -23,42 +24,59 @@
 
         <workout-service id="service" workouts="{{ workouts }}"></workout-service>
 
-        BUTTONS FOR ADDING TO WORKOUTS
-
-        <div layout vertical center>
+        <!-- on-tap-submit uses the broadcast tap-submit from set-menu -->
+        <div layout vertical center on-tap-submit="{{ alertalert }}">
 
             <div class="workout" hidden?="{{show !== 'today' }}">
+            <div>WHAT</div>
+                <set-menu></set-menu>
+
                 <template repeat="{{type in types}}">
                     <workout-card
                             edit="true"
-                            sets="{{ new }}"
+                            sets="{{ newsets }}"
                             type="{{ type }}">
                     </workout-card>
+                    {{ newsets.length }}
                 </template>
+
             </div>
 
-        <template repeat="{{workout in workouts}}" class="workout">
+            <template repeat="{{workout in workouts}}" class="workout">
 
-            <div class="workout" hidden?="{{show === 'today' }}">
-                <template repeat="{{type in types}}">
-                    <workout-card
-                            edit="false"
-                            sets="{{workout.sets}}"
-                            type="{{type}}">
-                    </workout-card>
-                </template>
-            </div>
+                <div class="workout" hidden?="{{show === 'today' }}">
+                    <template repeat="{{type in types}}">
+                        <workout-card
+                                edit="false"
+                                sets="{{workout.sets}}"
+                                type="{{type}}">
+                        </workout-card>
+                    </template>
+                </div>
 
-        </template>
+            </template>
+
         </div>
 
     </template>
 
     <script>
-        Polymer({
+        Polymer('workout-list', {
+            alertalert: function () {
+                alert('alert alert');
+                this.newsets.push({
+                    "type": "squat",
+                    "weight": 175,
+                    "reps": 6,
+                    "warmwork": "working"
+                })
+            },
             created: function () {
                 this.types = ["squat", "deadlift", "chin"];
-                this.new = [
+//                this.new = [
+//                ];
+
+                this.newtwo = [
                     { "type": "chin",
                         "weight": 25,
                         "reps": 6,
@@ -149,6 +167,17 @@
                 ]
             },
             publish: {
+                newsets: {
+                    value: [
+                        {
+                            "type": "squat",
+                            "weight": 179,
+                            "reps": 6,
+                            "warmwork": "working"
+                        }
+                    ],
+                    reflect: true
+                }
             },
             handleFavorite: function(event, detail, sender) {
                 var post = sender.templateInstance.model.post;

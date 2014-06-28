@@ -72,27 +72,30 @@
         <h2>{{ type }}</h2>
 
         <div hidden?="{{ edit === 'false' }}">
-            <!--<div layout horizontal left>-->
-                <!--<div class="warmups">-->
-                    <!--<template repeat="{{ set in sets | onlyType(type) | warmups }}">-->
-                        <!--<set-row class="{{ set.warmwork }}"-->
-                                 <!--type="{{ set.type }}"-->
-                                 <!--weight="{{ set.weight }}"-->
-                                 <!--warmwork="{{ set.warmwork }}"-->
-                                 <!--reps="{{ set.reps }}">-->
-                        <!--</set-row>-->
-                    <!--</template>-->
-                <!--</div>-->
-                <!--<div class="workings">-->
-                    <!--<template repeat="{{ set in sets | onlyType(type) | working }}">-->
-                        <!--<set-row class="{{ set.warmwork }}"-->
-                                 <!--type="{{ set.type }}"-->
-                                 <!--weight="{{ set.weight }}"-->
-                                 <!--reps="{{ set.reps }}">-->
-                        <!--</set-row>-->
-                    <!--</template>-->
-                <!--</div>-->
-            <!--</div>-->
+            <div layout horizontal left>
+                <div class="warmups">
+                    <template repeat="{{ set in sets">
+                        <set-row class="{{ set.warmwork }}"
+                                 type="{{ set.type }}"
+                                 weight="{{ set.weight }}"
+                                 warmwork="{{ set.warmwork }}"
+                                 reps="{{ set.reps }}"
+                                 hidden?="{{ set.type !== type || set.warmwork !== 'warmups' }}">
+                        </set-row>
+                    </template>
+                </div>
+                <div class="workings">
+                    <!--<template repeat="{{ set in sets }}">-->
+                    <template repeat="{{ set in sets}}">
+                        <set-row class="{{ set.warmwork }}"
+                                 type="{{ set.type }}"
+                                 weight="{{ set.weight }}"
+                                 reps="{{ set.reps }}"
+                                 hidden?="{{ set.type !== type || set.warmwork !== 'working' }}">
+                        </set-row>
+                    </template>
+                </div>
+            </div>
         </div>
 
         <div hidden?="{{ edit === 'true' }}">
@@ -125,12 +128,16 @@
     </template>
     <script>
         Polymer('workout-card', {
-            publish: {
-//                favorite: {
-//                    value: false,
+            setsChanged: function(oldValue, newValue) {
+//                console.log(this.sets)
+//                this.sets = this.attributes.sets;
+            },
+//            publish: {
+//                sets: {
+//                    value: [],
 //                    reflect: true
 //                }
-            },
+//            },
             created: function () {
 
             },
@@ -141,6 +148,8 @@
                         typeSet.push(element);
                     }
                 })
+                console.log(value);
+                console.log(type);
                 return typeSet;
             },
             working: function (value) {

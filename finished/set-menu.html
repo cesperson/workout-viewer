@@ -1,0 +1,59 @@
+﻿<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/core-icon-button/core-icon-button.html">
+<link rel="import" href="../post-service/post-service.html">
+
+<polymer-element name="set-menu">
+    <template>
+        <style>
+            :host {
+                display: block;
+                position: relative;
+                background-color: white;
+                padding: 20px;
+                width: 96%;
+                padding: 2%;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+        </style>
+
+        SET MENUUUUUU
+        <post-service id="service" posts="{{posts}}"></post-service>
+        <div on-tap="{{ tapSubmit }}">
+            CLICK
+        </div>
+
+        <!--<div class="card-header" layout horizontal center>-->
+        <!--<content select="img"></content>-->
+        <!--<content select="h2"></content>-->
+        <!--</div>-->
+        <!--<core-icon-button-->
+        <!--id="favicon"-->
+        <!--icon="favorite"-->
+        <!--on-tap="{{favoriteTapped}}">-->
+        <!--</core-icon-button>-->
+        <!--<content></content>-->
+
+    </template>
+    <script>
+        Polymer('set-menu', {
+            publish: {
+                favorite: {
+                    value: false,
+                    reflect: true
+                },
+                weight: 55
+            },
+            tapSubmit: function() {
+//                alert('test');
+//                this.$.service.setFavorite(post.uid, post.favorite);
+                this.fire('tap-submit');
+            },
+            favoriteTapped: function(event, detail, sender) {
+                this.favorite = !this.favorite;
+                this.fire('favorite-tap');
+            }
+        });
+    </script>
+</polymer-element>
