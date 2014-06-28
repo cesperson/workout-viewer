@@ -21,24 +21,35 @@
             }
         </style>
 
-
-        <!--<post-service id="service" posts="{{posts}}"></post-service>-->
         <workout-service id="service" workouts="{{ workouts }}"></workout-service>
 
+        BUTTONS FOR ADDING TO WORKOUTS
+
         <div layout vertical center>
-            <template repeat="{{workout in workouts}}" class="workout">
-                <div class="workout" hidden?="{{show == 'today' }}">
-                    <template repeat="{{type in types}}">
-                        <workout-card
-                                favorite="{{workout.favorite}}"
-                                sets="{{workout.sets}}"
-                                type="{{type}}"
-                                on-favorite-tap="{{handleFavorite}}"
-                                hidden?="{{show == 'favorites' && !workout.favorite}}">
-                        </workout-card>
-                    </template>
-                </div>
-            </template>
+
+            <div class="workout" hidden?="{{show !== 'today' }}">
+                <template repeat="{{type in types}}">
+                    <workout-card
+                            edit="true"
+                            sets="{{ new }}"
+                            type="{{ type }}">
+                    </workout-card>
+                </template>
+            </div>
+
+        <template repeat="{{workout in workouts}}" class="workout">
+
+            <div class="workout" hidden?="{{show === 'today' }}">
+                <template repeat="{{type in types}}">
+                    <workout-card
+                            edit="false"
+                            sets="{{workout.sets}}"
+                            type="{{type}}">
+                    </workout-card>
+                </template>
+            </div>
+
+        </template>
         </div>
 
     </template>
@@ -47,9 +58,97 @@
         Polymer({
             created: function () {
                 this.types = ["squat", "deadlift", "chin"];
+                this.new = [
+                    { "type": "chin",
+                        "weight": 25,
+                        "reps": 6,
+                        "warmwork": "working"
+                    },
+                    {
+                        "type": "chin",
+                        "weight": 10,
+                        "reps": 8,
+                        "warmwork": "working"
+                    },
+                    {
+                        "type": "chin",
+                        "weight": "body",
+                        "reps": 5,
+                        "warmwork": "warmup"
+                    },
+                    {
+                        "type": "squat",
+                        "weight": 175,
+                        "reps": 6,
+                        "warmwork": "working"
+                    },
+                    { "type": "squat",
+                        "weight": 160,
+                        "reps": 10,
+                        "warmwork": "working"
+                    },
+                    {
+                        "type": "squat",
+                        "weight": 45,
+                        "reps": 5,
+                        "warmwork": "warmup"
+                    },
+                    {
+                        "type": "squat",
+                        "weight": 95,
+                        "reps": 5,
+                        "warmwork": "warmup"
+                    },
+                    {
+                        "type": "squat",
+                        "weight": 115,
+                        "reps": 5,
+                        "warmwork": "warmup"
+                    },
+                    {
+                        "type": "squat",
+                        "weight": 135,
+                        "reps": 3,
+                        "warmwork": "warmup"
+                    },
+                    {
+                        "type": "deadlift",
+                        "weight": 175,
+                        "reps": 6,
+                        "warmwork": "working"
+                    },
+                    { "type": "deadlift",
+                        "weight": 160,
+                        "reps": 10,
+                        "warmwork": "working"
+                    },
+                    {
+                        "type": "deadlift",
+                        "weight": 45,
+                        "reps": 5,
+                        "warmwork": "warmup"
+                    },
+                    {
+                        "type": "deadlift",
+                        "weight": 95,
+                        "reps": 5,
+                        "warmwork": "warmup"
+                    },
+                    {
+                        "type": "deadlift",
+                        "weight": 115,
+                        "reps": 5,
+                        "warmwork": "warmup"
+                    },
+                    {
+                        "type": "deadlift",
+                        "weight": 135,
+                        "reps": 3,
+                        "warmwork": "warmup"
+                    }
+                ]
             },
             publish: {
-                huh: "HUH"
             },
             handleFavorite: function(event, detail, sender) {
                 var post = sender.templateInstance.model.post;
