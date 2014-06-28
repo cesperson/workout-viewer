@@ -80,7 +80,7 @@
                                  weight="{{ set.weight }}"
                                  warmwork="{{ set.warmwork }}"
                                  reps="{{ set.reps }}"
-                                 hidden?="{{ set.type !== type || set.warmwork !== 'warmups' }}">
+                                 hidden?="{{ set.type !== type || set.warmwork !== 'warmup' }}">
                         </set-row>
                     </template>
                 </div>
@@ -101,21 +101,23 @@
         <div hidden?="{{ edit === 'true' }}">
             <div layout horizontal left>
                 <div class="warmups">
-                    <template repeat="{{ set in sets | onlyType(type) | warmups }}">
+                    <template repeat="{{ set in sets }}">
                         <set-row class="{{ set.warmwork }}"
                                  type="{{ set.type }}"
                                  weight="{{ set.weight }}"
                                  warmwork="{{ set.warmwork }}"
-                                 reps="{{ set.reps }}">
+                                 reps="{{ set.reps }}"
+                                 hidden?="{{ set.type !== type || set.warmwork !== 'warmup' }}">
                         </set-row>
                     </template>
                 </div>
                 <div class="workings">
-                    <template repeat="{{ set in sets | onlyType(type) | working }}">
+                    <template repeat="{{ set in sets }}">
                         <set-row class="{{ set.warmwork }}"
                                  type="{{ set.type }}"
                                  weight="{{ set.weight }}"
-                                 reps="{{ set.reps }}">
+                                 reps="{{ set.reps }}"
+                                 hidden?="{{ set.type !== type || set.warmwork !== 'working' }}">
                         </set-row>
                     </template>
                 </div>
@@ -140,36 +142,36 @@
 //            },
             created: function () {
 
-            },
-            onlyType: function (value, type) {
-                var typeSet = [];
-                value.forEach(function(element, index) {
-                    if (element.type === type) {
-                        typeSet.push(element);
-                    }
-                })
-                console.log(value);
-                console.log(type);
-                return typeSet;
-            },
-            working: function (value) {
-                var working = [];
-                value.forEach(function(element, index) {
-                    if (element.warmwork === 'working') {
-                        working.push(element);
-                    }
-                })
-                return working;
-            },
-            warmups: function (value) {
-                var warmups = [];
-                value.forEach(function(element, index) {
-                    if (element.warmwork === 'warmup') {
-                        warmups.push(element);
-                    }
-                })
-                return warmups;
-            },
+            }
+//            onlyType: function (value, type) {
+//                var typeSet = [];
+//                value.forEach(function(element, index) {
+//                    if (element.type === type) {
+//                        typeSet.push(element);
+//                    }
+//                })
+//                console.log(value);
+//                console.log(type);
+//                return typeSet;
+//            },
+//            working: function (value) {
+//                var working = [];
+//                value.forEach(function(element, index) {
+//                    if (element.warmwork === 'working') {
+//                        working.push(element);
+//                    }
+//                })
+//                return working;
+//            },
+//            warmups: function (value) {
+//                var warmups = [];
+//                value.forEach(function(element, index) {
+//                    if (element.warmwork === 'warmup') {
+//                        warmups.push(element);
+//                    }
+//                })
+//                return warmups;
+//            }
         });
     </script>
 </polymer-element>

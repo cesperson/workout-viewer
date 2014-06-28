@@ -18,10 +18,16 @@
                 font-size: 1rem;
                 font-weight: 300;
             }
+            paper-input {
+                width: 2em;
+            }
             paper-button[raisedButton].colored {
                 background: #4285f4;
                 color: #fff;
                 font-size: .8rem;
+            }
+            paper-slider {
+                height: 28px;
             }
         </style>
 
@@ -29,6 +35,8 @@
 
         <post-service id="service" posts="{{posts}}"></post-service>
         <div>
+            <paper-input label="{{ weight }}" validate="^[0-9]{1,3}$" class="" value="{{ weight }}"></paper-input>
+
             <paper-slider id="ratings" pin="" snaps="" max="10" step="1" value="{{ reps }}"></paper-slider>
 
             <paper-button raisedbutton="" class="colored" label="add" role="button" tabindex="0" aria-label="colored" on-tap="{{ tapSubmit }}"></paper-button>
@@ -42,14 +50,15 @@
                     value: false,
                     reflect: true
                 },
-                reps: 5
+                reps: 5,
+                weight: 100
             },
             tapSubmit: function() {
 //                var slider = document.querySelectorAll('paper-slider')[0];
 
                 this.fire('tap-submit', {
                     "type": "squat",
-                    "weight": 175,
+                    "weight": this.weight,
                     "reps": this.reps,
                     "warmwork": "working"
                 });
