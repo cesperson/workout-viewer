@@ -6,39 +6,21 @@
         "avatar" : "../images/avatar-01.svg",
         "favorite": false,
         "sets" : [
-            {
-                "type": "chin",
-                "weight": 175,
+            { "type": "chin",
+                "weight": 25,
                 "reps": 6,
                 "warmwork": "working"
             },
-            { "type": "chin",
-                "weight": 160,
-                "reps": 10,
+            {
+                "type": "chin",
+                "weight": 10,
+                "reps": 8,
                 "warmwork": "working"
             },
             {
                 "type": "chin",
-                "weight": 45,
+                "weight": "body",
                 "reps": 5,
-                "warmwork": "warmup"
-            },
-            {
-                "type": "chin",
-                "weight": 95,
-                "reps": 5,
-                "warmwork": "warmup"
-            },
-            {
-                "type": "chin",
-                "weight": 115,
-                "reps": 5,
-                "warmwork": "warmup"
-            },
-            {
-                "type": "chin",
-                "weight": 135,
-                "reps": 3,
                 "warmwork": "warmup"
             },
             {

@@ -15,7 +15,7 @@
                 margin-bottom: 30px;
             }
             .workout {
-                border-bottom: 1px solid #000;
+                border-bottom: 1px solid #ccc;
                 width: 100%;
                 margin-bottom: 30px;
             }
@@ -27,30 +27,16 @@
 
         <div layout vertical center>
             <template repeat="{{workout in workouts}}" class="workout">
-                <div class="workout">
-                    <template repeat="{{workout in workouts}}">
+                <div class="workout" hidden?="{{show == 'today' }}">
+                    <template repeat="{{type in types}}">
+                        <workout-card
+                                favorite="{{workout.favorite}}"
+                                sets="{{workout.sets}}"
+                                type="{{type}}"
+                                on-favorite-tap="{{handleFavorite}}"
+                                hidden?="{{show == 'favorites' && !workout.favorite}}">
+                        </workout-card>
                     </template>
-                    <workout-card
-                            favorite="{{workout.favorite}}"
-                            sets="{{workout.sets}}"
-                            type="squat"
-                            on-favorite-tap="{{handleFavorite}}"
-                            hidden?="{{show == 'favorites' && !workout.favorite}}">
-                    </workout-card>
-                    <workout-card
-                            favorite="{{workout.favorite}}"
-                            sets="{{workout.sets}}"
-                            type="deadlift"
-                            on-favorite-tap="{{handleFavorite}}"
-                            hidden?="{{show == 'favorites' && !workout.favorite}}">
-                    </workout-card>
-                    <workout-card
-                            favorite="{{workout.favorite}}"
-                            sets="{{workout.sets}}"
-                            type="chin"
-                            on-favorite-tap="{{handleFavorite}}"
-                            hidden?="{{show == 'favorites' && !workout.favorite}}">
-                    </workout-card>
                 </div>
             </template>
         </div>
@@ -59,6 +45,12 @@
 
     <script>
         Polymer({
+            created: function () {
+                this.types = ["squat", "deadlift", "chin"];
+            },
+            publish: {
+                huh: "HUH"
+            },
             handleFavorite: function(event, detail, sender) {
                 var post = sender.templateInstance.model.post;
                 this.$.service.setFavorite(post.uid, post.favorite);
