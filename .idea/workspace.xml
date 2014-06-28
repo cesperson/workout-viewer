@@ -24,10 +24,22 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="workout-list.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="workout-list.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="39" selection-start="947" selection-end="947" vertical-scroll-proportion="0.4223149" vertical-offset="0" max-vertical-offset="1020">
+                <state line="27" column="39" selection-start="947" selection-end="947" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1020">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider editor-type-id="MarkdownPreviewEditor">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="0" selection-start="45" selection-end="45" vertical-scroll-proportion="0.06276151" vertical-offset="0" max-vertical-offset="956">
                   <folding />
                 </state>
               </provider>
@@ -98,6 +110,7 @@
         <option value="$PROJECT_DIR$/finished/set-row.html" />
         <option value="$PROJECT_DIR$/finished/workout-list.html" />
         <option value="$PROJECT_DIR$/finished/workout-card.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -288,7 +301,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="947" selection-end="947" vertical-scroll-proportion="0.4223149" vertical-offset="0" max-vertical-offset="1020">
+        <state line="27" column="39" selection-start="947" selection-end="947" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="45" selection-end="45" vertical-scroll-proportion="0.06276151" vertical-offset="0" max-vertical-offset="956">
           <folding />
         </state>
       </provider>
