@@ -2,80 +2,81 @@
 <link rel="import" href="../components/core-icon-button/core-icon-button.html">
 <link rel="import" href="set-row.html">
 
-<polymer-element name="workout-card">
-  <template>
-    <style>
-    :host {
-      display: block;
-      position: relative;
-      background-color: white;
-      padding: 20px;
-      width: 100%;
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-    .card-header {
-      margin-bottom: 10px;
-    }
-    polyfill-next-selector { content: ".card-header h2"; }
-    .card-header ::content h2 {
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 300;
-    }
-    polyfill-next-selector { content: ".card-header img"; }
-    .card-header ::content img {
-      width: 70px;
-      border-radius: 50%;
-      margin: 10px;
-    }
-    core-icon-button {
-      position: absolute;
-      top: 3px;
-      right: 3px;
-    }
-    core-icon-button {
-      fill: #636363;
-    }
-    :host([favorite]) core-icon-button {
-      fill: #da4336;
-    }
-    </style>
+<polymer-element name="workout-card" attributes="sets">
+    <template>
+        <style>
+            :host {
+                display: block;
+                position: relative;
+                background-color: white;
+                padding: 20px;
+                width: 100%;
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+            .card-header {
+                margin-bottom: 10px;
+            }
+            polyfill-next-selector { content: ".card-header h2"; }
+            .card-header ::content h2 {
+                margin: 0;
+                font-size: 1.8rem;
+                font-weight: 300;
+            }
+            polyfill-next-selector { content: ".card-header img"; }
+            .card-header ::content img {
+                width: 70px;
+                border-radius: 50%;
+                margin: 10px;
+            }
+            core-icon-button {
+                position: absolute;
+                top: 3px;
+                right: 3px;
+            }
+            core-icon-button {
+                fill: #636363;
+            }
+            :host([favorite]) core-icon-button {
+                fill: #da4336;
+            }
+        </style>
 
-    <div class="card-header" layout horizontal center>
-      <!--<content select="img"></content>-->
-      <!--<content select="h2"></content>-->
-    </div>
-      <content select="img"></content>
-      <!--<content select="h2"></content>-->
-      <!--<content select="set-row"></content>-->
+        <div class="card-header" layout horizontal center>
+        </div>
+        <content select="img"></content>
+        <content></content>
 
-      <!--<template repeat="{{ set in workout.sets }}">-->
-          <!-- this doesn't show -->
-          <!--fjdisaof-->
-          <!--<set-row></set-row>-->
-      <!--</template>-->
+        <template repeat="{{ set in sets | onlyType('squat') }}">
+            <h2>Squats</h2>
+            <set-row type="{{ set.type }}"
+                     weight="{{ set.weight }}"
+                     reps="{{ set.reps }}">
+            </set-row>
+        </template>
 
-    <!--<core-icon-button-->
-      <!--id="favicon"-->
-      <!--icon="favorite"-->
-      <!--on-tap="{{favoriteTapped}}">-->
-    <!--</core-icon-button>-->
-    <content></content>
-
-  </template>
-  <script>
-  Polymer('workout-card', {
-    publish: {
-      favorite: {
-        value: false,
-        reflect: true
-      }
-    },
-    favoriteTapped: function(event, detail, sender) {
-      this.favorite = !this.favorite;
-      this.fire('favorite-tap');
-    }
-  });
-  </script>
+    </template>
+    <script>
+        Polymer('workout-card', {
+            publish: {
+                favorite: {
+                    value: false,
+                    reflect: true
+                }
+            },
+            onlyType: function (value, type) {
+                var typeSet = [];
+                value.forEach(function(element, index) {
+                    if (element.type === type) {
+                        typeSet.push(element);
+                    }
+                })
+                return typeSet;
+            },
+            favoriteTapped: function(event, detail, sender) {
+                this.favorite = !this.favorite;
+                this.fire('favorite-tap');
+            }
+        });
+    </script>
 </polymer-element>

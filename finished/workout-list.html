@@ -28,12 +28,6 @@
                         sets="{{workout.sets}}"
                         on-favorite-tap="{{handleFavorite}}"
                         hidden?="{{show == 'favorites' && !workout.favorite}}">
-                <template repeat="{{ set in workout.sets }}">
-                    <set-row type="{{ set.type }}"
-                             weight="{{ set.weight }}"
-                             reps="{{ set.reps }}">
-                    </set-row>
-                </template>
                 </workout-card>
             </template>
         </div>
@@ -44,6 +38,24 @@
             handleFavorite: function(event, detail, sender) {
                 var post = sender.templateInstance.model.post;
                 this.$.service.setFavorite(post.uid, post.favorite);
+            },
+            onlyType: function (value, type) {
+                var typeSet = [];
+                value.forEach(function(element, index) {
+                    if (element.type === type) {
+                        typeSet.push(element);
+                    }
+                })
+                return typeSet;
+            },
+            onlySquats: function (value) {
+                var squats = [];
+                value.forEach(function(element, index) {
+                    if (element.type === "squat") {
+                        squats.push(element);
+                    }
+                })
+                return squats;
             }
         });
     </script>
