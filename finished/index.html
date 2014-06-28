@@ -58,15 +58,14 @@
 
     <div class="container" layout vertical center>
         <workout-list show="all"></workout-list>
-
-        <post-list show="all"></post-list>
+        <!--<post-list show="all"></post-list>-->
     </div>
 
 
 </core-header-panel>
 
 <script>
-    var list = document.querySelector('post-list');
+    var list = document.querySelector('workout-list');
     var tabs = document.querySelector('paper-tabs');
 
     tabs.addEventListener('core-select', function() {
