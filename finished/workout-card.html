@@ -11,7 +11,7 @@
                 background-color: white;
                 padding: 20px;
                 width: 100%;
-                font-size: 1.2rem;
+                /*font-size: 1.2rem;*/
                 font-weight: 300;
             }
             .card-header {
@@ -40,16 +40,40 @@
             :host([favorite]) core-icon-button {
                 fill: #da4336;
             }
+            h3 {
+                margin: 1rem 0 1rem 0;
+                font-weight: normal;
+                text-transform: uppercase;
+                color: #777;
+            }
+            h3.warmups {
+                font-size: .8rem;
+
+            }
+            h3.working {
+
+            }
         </style>
 
-        <div class="card-header" layout horizontal center>
-        </div>
-        <content select="img"></content>
-        <content></content>
+        <!--<div class="card-header" layout horizontal center>-->
+        <!--</div>-->
 
-        <template repeat="{{ set in sets | onlyType('squat') }}">
-            <h2>Squats</h2>
-            <set-row type="{{ set.type }}"
+        <h2>Squats</h2>
+
+        <!--<h3 class="warmups">Warmups</h3>-->
+        <template repeat="{{ set in sets | onlyType('squat') | warmups }}">
+            <set-row class="{{ set.warmwork }}"
+                     type="{{ set.type }}"
+                     weight="{{ set.weight }}"
+                     warmwork="{{ set.warmwork }}"
+                     reps="{{ set.reps }}">
+            </set-row>
+        </template>
+
+        <h3 class="working">Working</h3>
+        <template repeat="{{ set in sets | onlyType('squat') | working }}">
+            <set-row class="{{ set.warmwork }}"
+                     type="{{ set.type }}"
                      weight="{{ set.weight }}"
                      reps="{{ set.reps }}">
             </set-row>
@@ -64,6 +88,9 @@
                     reflect: true
                 }
             },
+            created: function () {
+
+            },
             onlyType: function (value, type) {
                 var typeSet = [];
                 value.forEach(function(element, index) {
@@ -72,6 +99,24 @@
                     }
                 })
                 return typeSet;
+            },
+            working: function (value) {
+                var working = [];
+                value.forEach(function(element, index) {
+                    if (element.warmwork === 'working') {
+                        working.push(element);
+                    }
+                })
+                return working;
+            },
+            warmups: function (value) {
+                var warmups = [];
+                value.forEach(function(element, index) {
+                    if (element.warmwork === 'warmup') {
+                        warmups.push(element);
+                    }
+                })
+                return warmups;
             },
             favoriteTapped: function(event, detail, sender) {
                 this.favorite = !this.favorite;

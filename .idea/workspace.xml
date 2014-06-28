@@ -24,22 +24,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="workout-list.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="workout-list.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="39" selection-start="947" selection-end="947" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1020">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider editor-type-id="MarkdownPreviewEditor">
-                <state />
-              </provider>
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="25" selection-start="43" selection-end="43" vertical-scroll-proportion="0.031380754" vertical-offset="0" max-vertical-offset="956">
+                <state line="31" column="22" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.4848801" vertical-offset="0" max-vertical-offset="959">
                   <folding />
                 </state>
               </provider>
@@ -61,25 +49,25 @@
           <file leaf-file-name="workouts.json" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/api/workouts.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="450">
+                <state line="43" column="12" selection-start="1143" selection-end="1143" vertical-scroll-proportion="-26.875" vertical-offset="0" max-vertical-offset="795">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="workout-card.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="workout-card.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/finished/workout-card.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="50" column="13" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.5464025" vertical-offset="226" max-vertical-offset="1320">
+                <state line="63" column="33" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-24.375" vertical-offset="360" max-vertical-offset="1995">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="set-row.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="set-row.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/finished/set-row.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="39" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1110">
+                <state line="72" column="21" selection-start="2311" selection-end="2311" vertical-scroll-proportion="0.8446298" vertical-offset="270" max-vertical-offset="1590">
                   <folding />
                 </state>
               </provider>
@@ -107,10 +95,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/finished/index.html" />
-        <option value="$PROJECT_DIR$/finished/set-row.html" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/finished/workout-list.html" />
         <option value="$PROJECT_DIR$/finished/workout-card.html" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/api/workouts.json" />
+        <option value="$PROJECT_DIR$/finished/set-row.html" />
       </list>
     </option>
   </component>
@@ -187,8 +176,65 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../polymer/polymer-tutorial-master 2/finished" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="13b5e88c-b111-48e4-a7f5-8c8fb7f66c2f">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="148d71dd-d65d-4e0c-b808-1fd90342dc86">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="3464afff-8ac5-406d-ae9c-581500be4e2e">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="6f8a3c47-4097-4d41-b299-32d925d96079">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="ceaf8898-0a87-486c-8354-be4a01091b0f">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="df351702-bf40-41a4-8346-7c37a4f9df6c">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="fe0d9820-6446-46c6-a13e-b2923ce1912e">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -199,6 +245,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e2b00144-dfc5-4d2f-ace8-800380e365ad" name="Default" comment="" />
@@ -264,6 +327,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.04707113" vertical-offset="0" max-vertical-offset="956">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/finished/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="19" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="258" max-vertical-offset="1245">
@@ -278,40 +351,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finished/set-row.html">
+    <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="39" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1110">
+        <state line="31" column="22" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.4848801" vertical-offset="0" max-vertical-offset="959">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/workouts.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="450">
+        <state line="43" column="12" selection-start="1143" selection-end="1143" vertical-scroll-proportion="-26.875" vertical-offset="0" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/finished/workout-card.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.5464025" vertical-offset="226" max-vertical-offset="1320">
+        <state line="63" column="33" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-24.375" vertical-offset="360" max-vertical-offset="1995">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
+    <entry file="file://$PROJECT_DIR$/finished/set-row.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="947" selection-end="947" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="43" selection-end="43" vertical-scroll-proportion="0.031380754" vertical-offset="0" max-vertical-offset="956">
+        <state line="72" column="21" selection-start="2311" selection-end="2311" vertical-scroll-proportion="0.8446298" vertical-offset="270" max-vertical-offset="1590">
           <folding />
         </state>
       </provider>

@@ -13,10 +13,33 @@
                 "reps": 6,
                 "warmwork": "working"
             },
-            {
-                "type": "squat",
+            { "type": "squat",
                 "weight": 175,
                 "reps": 6,
+                "warmwork": "working"
+            },
+            {
+                "type": "squat",
+                "weight": 45,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "squat",
+                "weight": 95,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "squat",
+                "weight": 115,
+                "reps": 5,
+                "warmwork": "warmup"
+            },
+            {
+                "type": "squat",
+                "weight": 135,
+                "reps": 3,
                 "warmwork": "warmup"
             }
         ]
