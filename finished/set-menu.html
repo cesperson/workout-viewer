@@ -1,6 +1,8 @@
 ﻿<link rel="import" href="../components/polymer/polymer.html">
 <link rel="import" href="../components/core-icon-button/core-icon-button.html">
 <link rel="import" href="../post-service/post-service.html">
+<link rel="import" href="../components/paper-button/paper-button.html">
+<link rel="import" href="../components/paper-slider/paper-slider.html">
 
 <polymer-element name="set-menu">
     <template>
@@ -13,27 +15,24 @@
                 width: 96%;
                 padding: 2%;
                 margin-bottom: 1rem;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 font-weight: 300;
+            }
+            paper-button[raisedButton].colored {
+                background: #4285f4;
+                color: #fff;
+                font-size: .8rem;
             }
         </style>
 
-        SET MENUUUUUU
-        <post-service id="service" posts="{{posts}}"></post-service>
-        <div on-tap="{{ tapSubmit }}">
-            CLICK
-        </div>
+        <!-- SET MENU -->
 
-        <!--<div class="card-header" layout horizontal center>-->
-        <!--<content select="img"></content>-->
-        <!--<content select="h2"></content>-->
-        <!--</div>-->
-        <!--<core-icon-button-->
-        <!--id="favicon"-->
-        <!--icon="favorite"-->
-        <!--on-tap="{{favoriteTapped}}">-->
-        <!--</core-icon-button>-->
-        <!--<content></content>-->
+        <post-service id="service" posts="{{posts}}"></post-service>
+        <div>
+            <paper-slider id="ratings" pin="" snaps="" max="10" step="1" value="{{ reps }}"></paper-slider>
+
+            <paper-button raisedbutton="" class="colored" label="add" role="button" tabindex="0" aria-label="colored" on-tap="{{ tapSubmit }}"></paper-button>
+        </div>
 
     </template>
     <script>
@@ -43,12 +42,17 @@
                     value: false,
                     reflect: true
                 },
-                weight: 55
+                reps: 5
             },
             tapSubmit: function() {
-//                alert('test');
-//                this.$.service.setFavorite(post.uid, post.favorite);
-                this.fire('tap-submit');
+//                var slider = document.querySelectorAll('paper-slider')[0];
+
+                this.fire('tap-submit', {
+                    "type": "squat",
+                    "weight": 175,
+                    "reps": this.reps,
+                    "warmwork": "working"
+                });
             },
             favoriteTapped: function(event, detail, sender) {
                 this.favorite = !this.favorite;

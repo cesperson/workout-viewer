@@ -28,7 +28,6 @@
         <div layout vertical center on-tap-submit="{{ alertalert }}">
 
             <div class="workout" hidden?="{{show !== 'today' }}">
-            <div>WHAT</div>
                 <set-menu></set-menu>
 
                 <template repeat="{{type in types}}">
@@ -37,7 +36,6 @@
                             sets="{{ newsets }}"
                             type="{{ type }}">
                     </workout-card>
-                    {{ newsets.length }}
                 </template>
 
             </div>
@@ -62,19 +60,11 @@
 
     <script>
         Polymer('workout-list', {
-            alertalert: function () {
-                alert('alert alert');
-                this.newsets.push({
-                    "type": "squat",
-                    "weight": 175,
-                    "reps": 6,
-                    "warmwork": "working"
-                })
+            alertalert: function (event) {
+                this.newsets.push(event.detail)
             },
             created: function () {
                 this.types = ["squat", "deadlift", "chin"];
-//                this.new = [
-//                ];
 
                 this.newtwo = [
                     { "type": "chin",
