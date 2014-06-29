@@ -90,9 +90,7 @@
                 this.label = (this.active) ? "Add Work Set" : "Add Warmup Set"
             },
             tapSubmit: function() {
-                console.log(this.warmwork);
                 this.fire('tap-submit', {
-//                    "type": "squat",
                     "weight": this.weight,
                     "reps": this.reps,
                     "warmwork": this.warmwork
