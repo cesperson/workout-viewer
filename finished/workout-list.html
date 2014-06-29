@@ -1,7 +1,5 @@
 ﻿<link rel="import" href="../components/polymer/polymer.html">
-<!--<link rel="import" href="../post-service/post-service.html">-->
 <link rel="import" href="../post-service/workout-service.html">
-<!--<link rel="import" href="post-card.html">-->
 <link rel="import" href="workout-card.html">
 <link rel="import" href="set-menu.html">
 
@@ -26,34 +24,27 @@
 
         <!-- on-tap-submit uses the broadcast tap-submit from set-menu -->
         <div layout vertical center on-tap-submit="{{ alertalert }}">
-
             <div class="workout" hidden?="{{show !== 'today' }}" on-active-set="{{ resetActive }}">
             <set-menu></set-menu>
-
             <template repeat="{{type in types}}">
                 <workout-card
                         edit="true"
                         sets="{{ newsets }}"
-                        active="false"
                         type="{{ type }}">
                 </workout-card>
             </template>
-
         </div>
 
         <template repeat="{{workout in workouts}}" class="workout">
-
             <div class="workout" hidden?="{{show === 'today' }}">
             <template repeat="{{type in types}}">
                 <workout-card
                         edit="false"
                         sets="{{workout.sets}}"
-                        active="false"
                         type="{{type}}">
                 </workout-card>
             </template>
             </div>
-
         </template>
 
         </div>
@@ -72,122 +63,34 @@
             resetActive: function (event) {
                 var cards =  this.shadowRoot.getElementsByTagName('workout-card');
                 for (var i = 0; i < cards.length; i += 1) {
-                    cards[i].active = false
+                    cards[i].active = false;
+                    cards[i].className = '';
                 }
             },
             getActive: function () {
                 var cards =  this.shadowRoot.getElementsByTagName('workout-card');
                 for (var i = 0; i < cards.length; i += 1) {
-                    if (cards[i].active) {
+                    if (cards[i].active === true) {
                         return cards[i]
                     }
                 }
+                this.resetActive();
+                cards[0].active = true;
+                cards[0].className = 'active';
+                return cards[0];
             },
             created: function () {
-                this.types = ["squat", "deadlift", "chin"];
-
-                this.newtwo = [
-                    { "type": "chin",
-                        "weight": 25,
-                        "reps": 6,
-                        "warmwork": "working"
-                    },
-                    {
-                        "type": "chin",
-                        "weight": 10,
-                        "reps": 8,
-                        "warmwork": "working"
-                    },
-                    {
-                        "type": "chin",
-                        "weight": "body",
-                        "reps": 5,
-                        "warmwork": "warmup"
-                    },
-                    {
-                        "type": "squat",
-                        "weight": 175,
-                        "reps": 6,
-                        "warmwork": "working"
-                    },
-                    { "type": "squat",
-                        "weight": 160,
-                        "reps": 10,
-                        "warmwork": "working"
-                    },
-                    {
-                        "type": "squat",
-                        "weight": 45,
-                        "reps": 5,
-                        "warmwork": "warmup"
-                    },
-                    {
-                        "type": "squat",
-                        "weight": 95,
-                        "reps": 5,
-                        "warmwork": "warmup"
-                    },
-                    {
-                        "type": "squat",
-                        "weight": 115,
-                        "reps": 5,
-                        "warmwork": "warmup"
-                    },
-                    {
-                        "type": "squat",
-                        "weight": 135,
-                        "reps": 3,
-                        "warmwork": "warmup"
-                    },
-                    {
-                        "type": "deadlift",
-                        "weight": 175,
-                        "reps": 6,
-                        "warmwork": "working"
-                    },
-                    { "type": "deadlift",
-                        "weight": 160,
-                        "reps": 10,
-                        "warmwork": "working"
-                    },
-                    {
-                        "type": "deadlift",
-                        "weight": 45,
-                        "reps": 5,
-                        "warmwork": "warmup"
-                    },
-                    {
-                        "type": "deadlift",
-                        "weight": 95,
-                        "reps": 5,
-                        "warmwork": "warmup"
-                    },
-                    {
-                        "type": "deadlift",
-                        "weight": 115,
-                        "reps": 5,
-                        "warmwork": "warmup"
-                    },
-                    {
-                        "type": "deadlift",
-                        "weight": 135,
-                        "reps": 3,
-                        "warmwork": "warmup"
-                    }
-                ]
+                this.types = ["squat", "bench", "deadlift", "push", "chin"];
             },
             publish: {
                 newsets: {
                     value: [
-                        {
-                            "type": "squat",
-                            "weight": 179,
-                            "reps": 6,
-                            "warmwork": "working"
-                        }
                     ],
                     reflect: true
                 }
+            },
+            domReady: function () {
+                this.getActive();
             },
             handleFavorite: function(event, detail, sender) {
                 var post = sender.templateInstance.model.post;

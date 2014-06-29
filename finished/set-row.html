@@ -1,7 +1,7 @@
 ﻿<link rel="import" href="../components/polymer/polymer.html">
 <link rel="import" href="../components/core-icon-button/core-icon-button.html">
 
-<polymer-element name="set-row" attributes="type weight reps warmwork">
+<polymer-element name="set-row" attributes="type weight reps warmwork edit" on-tap="removeSelf">
     <template>
         <style>
             :host {
@@ -12,6 +12,10 @@
                 display: flex;
                 flex-flow: row;
                 justify-content: left;
+                cursor: pointer;
+
+                /*opacity: 1;*/
+                /*transition: opacity .25s ease-in-out;*/
             }
             :host(.warmup) {
                 color: #555;
@@ -84,7 +88,18 @@
                 favorite: {
                     value: false,
                     reflect: true
+                },
+                edit: false
+            },
+            removeSelf: function (event) {
+                // stop the ripple
+                event.stopPropagation();
+
+                if (!this.edit) {
+                    return;
                 }
+
+                this.remove();
             },
             favoriteTapped: function(event, detail, sender) {
                 this.favorite = !this.favorite;

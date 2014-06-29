@@ -4,7 +4,7 @@
 <link rel="import" href="../components/paper-shadow/paper-shadow.html">
 <link rel="import" href="../components/paper-ripple/paper-ripple.html">
 
-<polymer-element name="workout-card" attributes="sets type edit active" on-tap="{{ toggleActive }}">
+<polymer-element name="workout-card" attributes="sets type edit" on-tap="{{ toggleActive }}">
     <template>
         <style>
             :host {
@@ -85,26 +85,29 @@
 
         <h2>{{ type }}</h2>
 
+        <!-- today -->
         <div hidden?="{{ edit === 'false' }}">
             <div layout horizontal left>
                 <div class="warmups">
-                    <template repeat="{{ set in sets">
+                    <template repeat="{{ set in sets }}">
                         <set-row class="{{ set.warmwork }}"
                                  type="{{ set.type }}"
                                  weight="{{ set.weight }}"
                                  warmwork="{{ set.warmwork }}"
                                  reps="{{ set.reps }}"
+                                 edit="true"
                                  hidden?="{{ set.type !== type || set.warmwork !== 'warmup' }}">
                         </set-row>
                     </template>
                 </div>
                 <div class="workings">
                     <!--<template repeat="{{ set in sets }}">-->
-                    <template repeat="{{ set in sets}}">
+                    <template repeat="{{ set in sets }}">
                         <set-row class="{{ set.warmwork }}"
                                  type="{{ set.type }}"
                                  weight="{{ set.weight }}"
                                  reps="{{ set.reps }}"
+                                 edit="true"
                                  hidden?="{{ set.type !== type || set.warmwork !== 'working' }}">
                         </set-row>
                     </template>
@@ -112,6 +115,7 @@
             </div>
         </div>
 
+        <!--  history -->
         <div hidden?="{{ edit === 'true' }}">
             <div layout horizontal left>
                 <div class="warmups">
@@ -121,7 +125,7 @@
                                  weight="{{ set.weight }}"
                                  warmwork="{{ set.warmwork }}"
                                  reps="{{ set.reps }}"
-                                 hidden?="{{ set.type !== type || set.warmwork !== 'warmup' }}">
+                                 hidden?="{{ set.type !== type || set.warmwork === 'working' }}">
                         </set-row>
                     </template>
                 </div>
@@ -145,28 +149,27 @@
     </template>
     <script>
         Polymer('workout-card', {
+            ready: function () {
+
+            },
             setsChanged: function(oldValue, newValue) {
 //                console.log(this.sets)
 //                this.sets = this.attributes.sets;
             },
-//            publish: {
-//                sets: {
-//                    value: [],
-//                    reflect: true
-//                }
-//            },
             created: function () {
-
             },
             toggleActive: function () {
                 if (this.classList.length && this.classList.contains('active')) {
                     this.className = '';
                     this.active = false;
                 } else {
-                    this.className = 'active';
+                    // broadcast active-set event which workout-list uses to
+                    // remove active class from all workout cards
                     this.fire('active-set');
+
+                    // set active class on this card
+                    this.className = 'active';
                     this.active = true;
-//                    debugger;
                 }
             }
 //            onlyType: function (value, type) {
@@ -176,28 +179,8 @@
 //                        typeSet.push(element);
 //                    }
 //                })
-//                console.log(value);
-//                console.log(type);
 //                return typeSet;
 //            },
-//            working: function (value) {
-//                var working = [];
-//                value.forEach(function(element, index) {
-//                    if (element.warmwork === 'working') {
-//                        working.push(element);
-//                    }
-//                })
-//                return working;
-//            },
-//            warmups: function (value) {
-//                var warmups = [];
-//                value.forEach(function(element, index) {
-//                    if (element.warmwork === 'warmup') {
-//                        warmups.push(element);
-//                    }
-//                })
-//                return warmups;
-//            }
         });
     </script>
 </polymer-element>
