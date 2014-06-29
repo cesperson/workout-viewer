@@ -24,19 +24,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="workout-list.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="workout-list.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="46" column="34" selection-start="1637" selection-end="1637" vertical-scroll-proportion="-19.375" vertical-offset="225" max-vertical-offset="2760">
+                <state line="34" column="38" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.29718456" vertical-offset="225" max-vertical-offset="2790">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="set-menu.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="set-menu.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/finished/set-menu.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="23" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.39537445" vertical-offset="61" max-vertical-offset="1200">
+                <state line="34" column="0" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-20.833334" vertical-offset="10" max-vertical-offset="1185">
                   <folding />
                 </state>
               </provider>
@@ -85,7 +85,7 @@
           <file leaf-file-name="workout-card.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/finished/workout-card.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="82" column="90" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.26590198" vertical-offset="975" max-vertical-offset="2745">
+                <state line="74" column="26" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.56308657" vertical-offset="570" max-vertical-offset="3180">
                   <folding />
                 </state>
               </provider>
@@ -94,7 +94,7 @@
           <file leaf-file-name="set-row.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/finished/set-row.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="16" selection-start="1121" selection-end="1121" vertical-scroll-proportion="-15.625" vertical-offset="120" max-vertical-offset="1515">
+                <state line="10" column="27" selection-start="406" selection-end="406" vertical-scroll-proportion="-0.625" vertical-offset="135" max-vertical-offset="1515">
                   <folding />
                 </state>
               </provider>
@@ -122,11 +122,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/finished/set-row.html" />
         <option value="$PROJECT_DIR$/api/workouts.json" />
         <option value="$PROJECT_DIR$/finished/index.html" />
-        <option value="$PROJECT_DIR$/finished/workout-list.html" />
         <option value="$PROJECT_DIR$/finished/set-menu.html" />
+        <option value="$PROJECT_DIR$/finished/workout-list.html" />
+        <option value="$PROJECT_DIR$/finished/set-row.html" />
         <option value="$PROJECT_DIR$/finished/workout-card.html" />
       </list>
     </option>
@@ -405,7 +405,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -477,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finished/set-row.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="16" selection-start="1121" selection-end="1121" vertical-scroll-proportion="-15.625" vertical-offset="120" max-vertical-offset="1515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finished/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245">
@@ -494,13 +487,6 @@
     <entry file="file://$PROJECT_DIR$/api/workouts.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="24" selection-start="1202" selection-end="1202" vertical-scroll-proportion="-0.625" vertical-offset="645" max-vertical-offset="3270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="34" selection-start="1637" selection-end="1637" vertical-scroll-proportion="-19.375" vertical-offset="225" max-vertical-offset="2760">
           <folding />
         </state>
       </provider>
@@ -521,14 +507,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finished/set-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="23" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.39537445" vertical-offset="61" max-vertical-offset="1200">
+        <state line="34" column="0" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-20.833334" vertical-offset="10" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="38" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.29718456" vertical-offset="225" max-vertical-offset="2790">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finished/set-row.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="27" selection-start="406" selection-end="406" vertical-scroll-proportion="-0.625" vertical-offset="135" max-vertical-offset="1515">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/finished/workout-card.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="90" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.26590198" vertical-offset="975" max-vertical-offset="2745">
+        <state line="74" column="26" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.56308657" vertical-offset="570" max-vertical-offset="3180">
           <folding />
         </state>
       </provider>

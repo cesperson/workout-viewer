@@ -1,8 +1,10 @@
 ﻿<link rel="import" href="../components/polymer/polymer.html">
 <link rel="import" href="../components/core-icon-button/core-icon-button.html">
 <link rel="import" href="set-row.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../components/paper-ripple/paper-ripple.html">
 
-<polymer-element name="workout-card" attributes="sets type edit">
+<polymer-element name="workout-card" attributes="sets type edit active" on-click="{{ toggleActive }}">
     <template>
         <style>
             :host {
@@ -13,6 +15,11 @@
                 width: 92%;
                 /*font-size: 1.2rem;*/
                 font-weight: 300;
+            }
+            :host(.active) {
+                background-color: #DDFFEF;
+                /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
             }
             .card-header {
                 margin-bottom: 10px;
@@ -64,10 +71,24 @@
             .workings {
                 width: 300px;
             }
+            paper-ripple {
+                color: #000;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
         </style>
 
         <!--<div class="card-header" layout horizontal center>-->
         <!--</div>-->
+
+
+        {{ active }}
+        {{ edit }}
+        <!--{{  }}-->
+        <paper-ripple fit></paper-ripple>
 
         <h2>{{ type }}</h2>
 
@@ -123,6 +144,7 @@
                 </div>
             </div>
         </div>
+                        <!--<paper-shadow id="myShadow" z="1"></div>-->
 
 
         <!--<h3 class="working">Working</h3>-->
@@ -142,6 +164,13 @@
 //            },
             created: function () {
 
+            },
+            toggleActive: function () {
+                if (this.classList.length && this.classList.contains('active')) {
+                    this.className = '';
+                } else {
+                    this.className = 'active';
+                }
             }
 //            onlyType: function (value, type) {
 //                var typeSet = [];
