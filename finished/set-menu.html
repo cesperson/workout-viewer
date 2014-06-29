@@ -6,7 +6,8 @@
 <link rel="import" href="../components/paper-toggle-button/paper-toggle-button.html">
 <link rel="import" href="../components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../components/paper-input/paper-input.html">
-<link rel="import" href="custom-dropdown.html">
+<link rel="import" href="../components/core-selector/core-selector.html">
+<!--<link rel="import" href="custom-dropdown.html">-->
 
 <polymer-element name="set-menu">
     <template>
@@ -154,7 +155,7 @@
 
                 <li>
                     <div class="set-label">Exercise:</div>
-                    <select class="workout-type">
+                    <select id="workouttype" class="workout-type" value="{{ type }}">
                         <option value="squat">Squat</option>
                         <option value="bench">Bench Press</option>
                         <option value="deadlift">Deadlift</option>
@@ -167,7 +168,7 @@
                     <!--<paper-button raisedbutton="" label="Warm up" role="button" tabindex="0">-->
                     <!--</paper-button>-->
                     <div class="set-label">Type:</div>
-                    <select class="workout-type">
+                    <select id="warmwork" class="workout-type" value="{{ warmwork }}">
                         <option value="warmup">Warm Up</option>
                         <option value="working">Working</option>
                     </select>
@@ -175,11 +176,11 @@
                 <li>
                         <div class="set-label">Weight:</div>
                         <!--<input type="number" name="quantity" min="1" max="999" class="workout-weight">-->
-                        <input type="number" min="1" max="999" width="3" maxlength="3" inputmode="numeric" pattern="[0-9]*" class="workout-weight">
+                        <input type="number" min="1" max="999" width="3" maxlength="3" inputmode="numeric" pattern="[0-9]*" class="workout-weight" value="{{ weight }}">
                 </li>
                 <li>
                         <div class="set-label">Reps:</div>
-                        <select class="workout-reps">
+                        <select class="workout-reps" value="{{ reps }}">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -223,6 +224,7 @@
                 reps: 5,
                 weight: 100,
                 active: false,
+                type: 'squat',
                 warmwork: "warmup",
                 label: "Add Warmup Set"
             },
@@ -233,6 +235,7 @@
             },
             tapSubmit: function() {
                 this.fire('tap-submit', {
+                    "type": this.type,
                     "weight": this.weight,
                     "reps": this.reps,
                     "warmwork": this.warmwork

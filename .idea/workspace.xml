@@ -27,7 +27,7 @@
           <file leaf-file-name="workout-list.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="63" column="48" selection-start="2125" selection-end="2125" vertical-scroll-proportion="-13.75" vertical-offset="615" max-vertical-offset="1605">
+                <state line="57" column="37" selection-start="1927" selection-end="1927" vertical-scroll-proportion="-16.875" vertical-offset="450" max-vertical-offset="1590">
                   <folding />
                 </state>
               </provider>
@@ -36,7 +36,7 @@
           <file leaf-file-name="set-menu.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/finished/set-menu.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="105" column="24" selection-start="3304" selection-end="3304" vertical-scroll-proportion="0.50052136" vertical-offset="1095" max-vertical-offset="3990">
+                <state line="170" column="83" selection-start="6768" selection-end="6768" vertical-scroll-proportion="0.29718456" vertical-offset="2370" max-vertical-offset="4035">
                   <folding />
                 </state>
               </provider>
@@ -45,7 +45,7 @@
           <file leaf-file-name="custom-dropdown.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/finished/custom-dropdown.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="62" column="33" selection-start="2028" selection-end="2028" vertical-scroll-proportion="-2.1066666" vertical-offset="772" max-vertical-offset="1800">
+                <state line="62" column="33" selection-start="2028" selection-end="2028" vertical-scroll-proportion="-7.9066668" vertical-offset="337" max-vertical-offset="1800">
                   <folding>
                     <marker date="1404081265000" expanded="true" signature="3306:3770" placeholder="..." />
                     <marker date="1404081265000" expanded="true" signature="3359:3748" placeholder="..." />
@@ -131,11 +131,11 @@
         <option value="$PROJECT_DIR$/finished/set-row.html" />
         <option value="$PROJECT_DIR$/finished/workout-card.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/finished/workout-list.html" />
         <option value="$PROJECT_DIR$/finished/index.html" />
         <option value="$PROJECT_DIR$/finished/set-menu-sequel.html" />
         <option value="$PROJECT_DIR$/finished/post-list.html" />
         <option value="$PROJECT_DIR$/finished/custom-dropdown.html" />
+        <option value="$PROJECT_DIR$/finished/workout-list.html" />
         <option value="$PROJECT_DIR$/finished/set-menu.html" />
       </list>
     </option>
@@ -475,6 +475,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/finished/workout-card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="0" selection-start="2663" selection-end="2663" vertical-scroll-proportion="0.8133472" vertical-offset="540" max-vertical-offset="2880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/finished/set-menu-sequel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="0" selection-start="1898" selection-end="1898" vertical-scroll-proportion="-1.25" vertical-offset="855" max-vertical-offset="2220">
@@ -482,16 +489,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="48" selection-start="2125" selection-end="2125" vertical-scroll-proportion="-13.75" vertical-offset="615" max-vertical-offset="1605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finished/custom-dropdown.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="33" selection-start="2028" selection-end="2028" vertical-scroll-proportion="-2.1066666" vertical-offset="772" max-vertical-offset="1800">
+        <state line="62" column="33" selection-start="2028" selection-end="2028" vertical-scroll-proportion="-7.9066668" vertical-offset="337" max-vertical-offset="1800">
           <folding>
             <marker date="1404081265000" expanded="true" signature="3306:3770" placeholder="..." />
             <marker date="1404081265000" expanded="true" signature="3359:3748" placeholder="..." />
@@ -501,16 +501,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finished/workout-card.html">
+    <entry file="file://$PROJECT_DIR$/finished/workout-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="0" selection-start="2663" selection-end="2663" vertical-scroll-proportion="0.8133472" vertical-offset="540" max-vertical-offset="2880">
+        <state line="57" column="37" selection-start="1927" selection-end="1927" vertical-scroll-proportion="-16.875" vertical-offset="450" max-vertical-offset="1590">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/finished/set-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="24" selection-start="3304" selection-end="3304" vertical-scroll-proportion="0.50052136" vertical-offset="1095" max-vertical-offset="3990">
+        <state line="170" column="83" selection-start="6768" selection-end="6768" vertical-scroll-proportion="0.29718456" vertical-offset="2370" max-vertical-offset="4035">
           <folding />
         </state>
       </provider>
