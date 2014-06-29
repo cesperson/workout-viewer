@@ -4,7 +4,7 @@
 <link rel="import" href="../components/paper-shadow/paper-shadow.html">
 <link rel="import" href="../components/paper-ripple/paper-ripple.html">
 
-<polymer-element name="workout-card" attributes="sets type edit active" on-click="{{ toggleActive }}">
+<polymer-element name="workout-card" attributes="sets type edit active" on-tap="{{ toggleActive }}">
     <template>
         <style>
             :host {
@@ -81,13 +81,6 @@
             }
         </style>
 
-        <!--<div class="card-header" layout horizontal center>-->
-        <!--</div>-->
-
-
-        {{ active }}
-        {{ edit }}
-        <!--{{  }}-->
         <paper-ripple fit></paper-ripple>
 
         <h2>{{ type }}</h2>
@@ -168,8 +161,12 @@
             toggleActive: function () {
                 if (this.classList.length && this.classList.contains('active')) {
                     this.className = '';
+                    this.active = false;
                 } else {
                     this.className = 'active';
+                    this.fire('active-set');
+                    this.active = true;
+//                    debugger;
                 }
             }
 //            onlyType: function (value, type) {

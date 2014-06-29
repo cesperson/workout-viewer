@@ -27,34 +27,34 @@
         <!-- on-tap-submit uses the broadcast tap-submit from set-menu -->
         <div layout vertical center on-tap-submit="{{ alertalert }}">
 
-            <div class="workout" hidden?="{{show !== 'today' }}">
-                <set-menu></set-menu>
+            <div class="workout" hidden?="{{show !== 'today' }}" on-active-set="{{ resetActive }}">
+            <set-menu></set-menu>
 
-                <template repeat="{{type in types}}">
-                    <workout-card
-                            edit="true"
-                            sets="{{ newsets }}"
-                            active="true"
-                            type="{{ type }}">
-                    </workout-card>
-                </template>
+            <template repeat="{{type in types}}">
+                <workout-card
+                        edit="true"
+                        sets="{{ newsets }}"
+                        active="false"
+                        type="{{ type }}">
+                </workout-card>
+            </template>
 
+        </div>
+
+        <template repeat="{{workout in workouts}}" class="workout">
+
+            <div class="workout" hidden?="{{show === 'today' }}">
+            <template repeat="{{type in types}}">
+                <workout-card
+                        edit="false"
+                        sets="{{workout.sets}}"
+                        active="false"
+                        type="{{type}}">
+                </workout-card>
+            </template>
             </div>
 
-            <template repeat="{{workout in workouts}}" class="workout">
-
-                <div class="workout" hidden?="{{show === 'today' }}">
-                    <template repeat="{{type in types}}">
-                        <workout-card
-                                edit="false"
-                                sets="{{workout.sets}}"
-                                active="false"
-                                type="{{type}}">
-                        </workout-card>
-                    </template>
-                </div>
-
-            </template>
+        </template>
 
         </div>
 
@@ -63,7 +63,25 @@
     <script>
         Polymer('workout-list', {
             alertalert: function (event) {
-                this.newsets.push(event.detail)
+                var activeCard = this.getActive();
+                var props = event.detail;
+
+                props.type=activeCard.type;
+                this.newsets.push(props)
+            },
+            resetActive: function (event) {
+                var cards =  this.shadowRoot.getElementsByTagName('workout-card');
+                for (var i = 0; i < cards.length; i += 1) {
+                    cards[i].active = false
+                }
+            },
+            getActive: function () {
+                var cards =  this.shadowRoot.getElementsByTagName('workout-card');
+                for (var i = 0; i < cards.length; i += 1) {
+                    if (cards[i].active) {
+                        return cards[i]
+                    }
+                }
             },
             created: function () {
                 this.types = ["squat", "deadlift", "chin"];
