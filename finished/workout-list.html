@@ -36,6 +36,7 @@
         </div>
 
         <template repeat="{{workout in workouts}}" class="workout">
+
             <div class="workout" hidden?="{{show === 'today' }}">
             <template repeat="{{type in types}}">
                 <workout-card
@@ -45,6 +46,7 @@
                 </workout-card>
             </template>
             </div>
+
         </template>
 
         </div>
@@ -90,6 +92,9 @@
             },
             domReady: function () {
                 this.getActive();
+
+                debugger;
+
             },
             handleFavorite: function(event, detail, sender) {
                 var post = sender.templateInstance.model.post;
